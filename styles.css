@@ -25,6 +25,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    background-color: var(--white);
 }
 ol, ul {
 	list-style: none;
@@ -54,7 +55,7 @@ table {
     
 }
 
-h1, h2, h3, nav a, nav span, .socials li, footer, #headicons p{
+h1, h2, h3, nav a, nav span, .socials li, footer, #headicons{
     font-family: "Bebas Neue", serif;
     font-weight: 400;
     font-style: normal;
@@ -79,6 +80,16 @@ h1{
     text-wrap: nowrap;
     padding-bottom: 20px;
 }
+
+#categories{
+    display: none; 
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--black);
+}
+
 
 #headicons{
     display: grid;
@@ -117,39 +128,40 @@ h1{
     border: 2px solid var(--orange);
 }
 
-#search{
+.search{
     display: flex;
     margin: 20px 0px;
 }
-#search input{
+.search input{
     padding: 10px 7em;
 }
-#search svg{
+.search svg{
     fill: var(--orange);
     stroke: var(--white);
     background-color: var(--orange);
 }
 
-nav li{
+.options li{
     display: inline-flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
 }
 
-nav ul{
+.options ul{
     display: flex;
     justify-content: space-around;
 }
 
-nav a{
+.options a{
     text-decoration: none;
     color: var(--orange);
     padding-bottom: 10px;
     font-size: 20px;
+    font-family: "Bebas Neue", serif;
 }
 
-nav img{
+.options img{
     width: 100%;
     max-width: 100%;
 }
@@ -287,5 +299,105 @@ ol li::before {
     font-weight: bold;
 }
 
+#headicons .search{
+    display: none;
+}
 
 
+@media screen and (min-width: 768px){
+    #categories{
+        display: flex;
+        max-width: 100%;
+        min-width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        box-shadow: 1.7px 3.4px 3.4px hsl(0deg 0% 0% / 0.45);
+        padding: 20px 0;
+    }
+
+    #categories img{
+        width: 60px;
+        height: auto;
+    }
+
+    #categories h3{
+        color: var(--orange);
+    }
+
+    h1{
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+
+    #headicons #hamb{
+        display: none;
+    }
+
+    .searchh1 .search{
+        display: none;
+    }
+
+    #headicons .search{
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+    }
+
+    .search input{
+        border: 2px solid var(--orange)
+    }
+
+    #headicons{
+        grid-template-columns: 1fr 6fr 1fr;
+        box-shadow: none;
+    }
+
+    .options{
+        position: relative;
+    }
+
+    .options ul{
+        background:rgba(255, 255, 255, .7);
+        width: 100%;
+        position: absolute;
+        top: 0%;
+        display: flex;
+    }
+
+    .options li{
+        padding: 10px 30px;
+
+    }
+
+    dl{
+        text-align: center;
+    }
+
+    #cooking{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+
+    #suggover{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        
+    }
+
+    .socials div{
+        margin: 0 20px;
+    }
+
+
+}
