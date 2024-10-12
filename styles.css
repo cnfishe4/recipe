@@ -401,3 +401,24 @@ ol li::before {
 
 
 }
+
+@media screen and (min-width: 1280px){
+    .details{
+        background-color: var(--black);
+        color: var(--med-blue)
+    }    
+
+    dl{
+        display: grid;
+
+    }
+
+    #suggover{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: none;
+    }
+
+
+
+}
